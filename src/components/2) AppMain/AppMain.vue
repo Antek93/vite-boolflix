@@ -13,16 +13,7 @@ export default {
         
     },
     methods: {
-        flag () {
-            if (this.languageDetected = 'en') {
-            } else if (this.languageDetected = 'it') {
-
-            } else if (this.languageDetected = 'de') {
-
-            } else if (this.languageDetected = 'fr') {
-
-            }
-        }
+        
     }
 };
 </script>
