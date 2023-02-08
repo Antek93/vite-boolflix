@@ -1,7 +1,28 @@
-# Vue 3 + Vite
+api_key: 58a47dcf8326b213704d799954c33bd8
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Milestone 0:
 
-## Recommended IDE Setup
+-progettate la struttura del global state sulla linea degli esercizi svolti nei giorni precedenti.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+.1) Creati:
+
+-AppHeader
+-AppMain
+
+-store.js
+
+https://drive.google.com/file/d/1seHJVqcmkoyhP0UxoNLzTujdRi8yHXOy/view?usp=sharing
+
+
+
+1.) User gives input-text value.
+		Searchform sends value to AppHeader
+
+2.) AppHeader gets API with input-text value
+then get response with filtered API
+
+3.) The filtered API goes to store
+and become global available
+
+4.) from Store.js pass the filtered API
+to AppMain and get info and images
