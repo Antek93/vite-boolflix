@@ -4,7 +4,6 @@ export default {
     name: 'searchForm', 
     data () {
         return {
-            variabileNome: '',
             store
         }
     },
