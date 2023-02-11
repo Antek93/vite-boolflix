@@ -4,20 +4,30 @@ export default {
     name: 'SeriesMain', 
     data () {
         return {
-            store
+            store,
         }
     },
     created () {
         
     },
     methods: {
-    }
+      fromRatingTo(stars) {
+        let newVote = stars;
+        newVote = Math.ceil((stars / 2));
+        return newVote
+    },
+    
+  }
 };
 </script>
 
 <template>
      
      <div v-for="element in this.store.seriesOutcome">
+            <div class="imgBox">
+              <img :src="`https://image.tmdb.org/t/p/w342${element.backdrop_path}`"
+                   alt="../../assets/Immagine 2023-02-11 105702.png">
+            </div>
             <div>
              {{ element.name }}
             </div>
@@ -49,10 +59,19 @@ export default {
             <!--SE cinese bandiera cinese-->
             <div v-if="element.original_language == 'ch'">
               <span class="fi fi-cn"></span>
+              <i class="bi bi-star"></i>
             </div>
 
             <div>
-             {{ element.vote_average }}
+                <!--Stampa tante stelle piene quanto il rating trasformato in quinti-->
+                <span v-for="n in fromRatingTo(element.vote_average)">
+                  &#9733; <!--Stella piena-->
+                </span>
+
+                <!--Stampa tante stelle vuoto quanto la differenza tra 5 (voto massimo) e il rating trasformato in quinti-->
+                <span v-for="n in (5 - fromRatingTo(element.vote_average))">
+                  &#9734;  <!--Stella vuota-->
+                </span>
             </div>
       </div>
 </template>
