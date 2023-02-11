@@ -1,0 +1,41 @@
+.imgBox {
+    width: 250px;
+    height: 350px;
+    background-image: url('../../assets/Immagine\ 2023-02-11\ 105702.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.infoContainer {
+    width: 250px;
+    height: 350px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    font-size: 20px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.imgBox:hover {
+    visibility: hidden;
+}
+
+.imgBox:hover .infoContainer {
+    visibility: visible;
+}

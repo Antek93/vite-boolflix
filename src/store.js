@@ -1,7 +1,7 @@
 import { reactive } from 'vue'
 
-export const store = reactive ({
+export const store = reactive({
     userInput: '',
-    moviesOutcome:'',
-    seriesOutcome:''
+    moviesOutcome: '',
+    seriesOutcome: ''
 })

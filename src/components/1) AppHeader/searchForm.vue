@@ -18,14 +18,14 @@ export default {
 <template>
     <div>
         <form action="#" @submit.prevent="$emit('search')">
-            <input type="text" v-model="store.userInput" placeholder="Search show">
-            <button type="submit">
-            Premi
+            <input class="searchBar" type="text" v-model="store.userInput" placeholder="Search show">
+            <button @keyup.click @keyup.enter class="ricerca" type="submit">
+            Go!
              </button>
         </form>
     </div>
 </template>
 
 <style lang="scss">
-
+@import '../../styles/partials/searchForm.scss'
 </style>

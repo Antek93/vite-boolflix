@@ -43,11 +43,13 @@ export default {
 
 <template>
     <header>
-        <div class="box container-fluid">
+        <div class="box container-fluid bg-dark d-flex justify-content-between align-items-center">
             <div>
-                <h1>Boolfix</h1>
+                <h1 class="px-2">
+                    Boolfix
+                </h1>
             </div>
-            <div>
+            <div class="px-2">
                 <SearchForm @search="getMovies" /> 
             </div>
         </div>
@@ -55,6 +57,6 @@ export default {
 </template>
 
 <style lang="scss">
-
+@import '../../styles/partials/AppHeaderAttributes.scss'
 </style>
 
